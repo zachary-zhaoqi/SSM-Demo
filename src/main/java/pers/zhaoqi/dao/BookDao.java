@@ -9,8 +9,8 @@ public interface BookDao {
     /**
      * 通过ID查询单本图书
      *
-     * @param id
-     * @return
+     * @param id 图书id
+     * @return 单个图书实体
      * */
     Book queryById(long id);
 
@@ -19,14 +19,14 @@ public interface BookDao {
      *
      * @param offset 查询起始位置
      * @param limit 查询条数
-     * @return
+     * @return list<Book>
      */
     List<Book> queryAll(@Param("offset") int offset, @Param("limit") int limit);
 
     /**
-     * 减少馆藏数量
+     * 馆藏数量减少1
      *
-     * @param bookId
+     * @param bookId 图书id
      * @return 如果影响行数等于>1，表示更新的记录行数
      */
     int reduceNumber(long bookId);
