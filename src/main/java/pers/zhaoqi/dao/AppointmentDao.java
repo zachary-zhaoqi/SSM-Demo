@@ -7,8 +7,8 @@ public interface AppointmentDao {
     /**
      * 插入预约图书记录
      *
-     * @param bookId
-     * @param studentId
+     * @param bookId 图书id
+     * @param studentId 学生id
      * @return 插入的行数
      */
     int insertAppointment(@Param("bookId") long bookId, @Param("studentId") long studentId);
@@ -16,9 +16,9 @@ public interface AppointmentDao {
     /**
      * 通过主键查询预约图书记录，并且携带图书实体
      *
-     * @param bookId
-     * @param studentId
-     * @return
+     * @param bookId 图书id
+     * @param studentId 学生id
+     * @return 预约记录实体
      */
     Appointment queryByKeyWithBook(@Param("bookId") long bookId, @Param("studentId") long studentId);
 
